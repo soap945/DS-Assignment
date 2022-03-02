@@ -1,8 +1,8 @@
 # Import required libraries
 import pandas as pd
 import dash
-import dash_html_components as html
-import dash_core_components as dcc
+from dash import html
+from dash import dcc
 from dash.dependencies import Input, Output, State
 import plotly.graph_objects as go
 import plotly.express as px
@@ -139,11 +139,11 @@ app.layout = html.Div(children=[
                                 
                                 # TODO3: Add a division with two empty divisions inside. See above disvision for example.
                                 html.Div([
-                                          html.Div([ ], id='plot4'),
-                                          html.Div([ ], id='plot5')
-                                         ], 
-                                          style={'display': 'flex'}),
-                            ]),
+                                        html.Div([ ], id='plot4'),
+                                        html.Div([ ], id='plot5')
+                                        ], 
+                                        style={'display': 'flex'}),
+                            ])
 
 # Callback function definition
 # TASK4: Add 5 ouput components
